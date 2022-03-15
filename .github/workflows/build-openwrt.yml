@@ -70,10 +70,6 @@ jobs:
     - name: Update feeds
        run: |
       cd openwrt && ./scripts/feeds update -a
-      cd feeds/luci
-      git pull --unshallow
-      git checkout f1f8009
-      cd ..
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 

@@ -74,7 +74,7 @@ jobs:
       git pull --unshallow
       git checkout f1f8009
       cd ..
- && ./scripts/feeds update -a
+      ./scripts/feeds update -a
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 

@@ -41,7 +41,7 @@ rm -rf  feeds/packages/net/lucky
 rm -rf  feeds/luci/applications/luci-app-openclash
 rm -rf  feeds/luci/applications/luci-app-lucky
 
-git clone  https://github.com/vernesong/OpenClash package/OpenClash
+git clone -b master --single-branch --filter=blob:none https://github.com/vernesong/OpenClash.git package/openclash
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 git clone  https://github.com/ophub/luci-app-amlogic package/amlogic
 # Apply patch

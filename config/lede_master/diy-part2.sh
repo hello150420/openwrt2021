@@ -38,8 +38,8 @@ sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armsr/g' package/lean/autoco
 #git clone https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 # Add lucky
 rm -rf  feeds/packages/net/lucky
-rm -rf  feeds/small8/luci-app-lucky
-rm -rf  feeds/small8/lucky
+#rm -rf  feeds/small8/luci-app-lucky
+#rm -rf  feeds/small8/lucky
 git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci

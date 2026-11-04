@@ -6816,7 +6816,7 @@ CONFIG_PACKAGE_cgi-io=y
 # CONFIG_PACKAGE_frpc is not set
 # CONFIG_PACKAGE_frps is not set
 # CONFIG_PACKAGE_gateway-go is not set
-CONFIG_PACKAGE_haproxy=y
+# CONFIG_PACKAGE_haproxy is not set
 # CONFIG_PACKAGE_halog is not set
 # CONFIG_PACKAGE_haproxy-nossl is not set
 # CONFIG_PACKAGE_istoreenhance is not set

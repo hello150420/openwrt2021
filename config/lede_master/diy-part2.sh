@@ -39,7 +39,7 @@ sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armsr/g' package/lean/autoco
 # Add lucky
 rm -rf  feeds/packages/net/lucky
 rm -rf  feeds/luci/applications/luci-app-lucky
-
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 # rm -rf  feeds/small8/luci-app-lucky
 # rm -rf  feeds/small8/lucky
 

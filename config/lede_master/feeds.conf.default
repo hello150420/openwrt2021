@@ -6,7 +6,7 @@ src-git telephony https://github.com/coolsnowwolf/telephony.git
 
 src-git OpenClash https://github.com/vernesong/OpenClash
 src-git amlogic https://github.com/ophub/luci-app-amlogic
-src-git lucky https://github.com/gdy666/luci-app-lucky
+
 
 
 

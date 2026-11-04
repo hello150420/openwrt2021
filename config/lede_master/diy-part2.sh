@@ -42,7 +42,7 @@ rm -rf  feeds/luci/applications/luci-app-lucky
 
 # rm -rf  feeds/small8/luci-app-lucky
 # rm -rf  feeds/small8/lucky
-git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
+
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
 #

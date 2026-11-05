@@ -59,6 +59,7 @@ git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 
 # Add luci-app-openclash
 rm -rf  feeds/luci/applications/luci-app-openclash
+rm -rf  feeds/luci/applications/luci-app-passwall
 git clone  https://github.com/vernesong/OpenClash.git package/openclash
 #
 # Apply patch

@@ -51,6 +51,11 @@ fi
 # Add luci-app-amlogic
 rm -rf package/luci-app-amlogic
 git clone -b main https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
+
+# Add luci-app-lucky
+rm -rf  feeds/packages/net/lucky
+rm -rf  feeds/luci/applications/luci-app-lucky
+git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 #
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci

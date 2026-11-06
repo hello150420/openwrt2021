@@ -35,15 +35,16 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
+    if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
+      - name: Checkout
+        uses: actions/checkout@v5
 
-    - name: Initialization environment
-      id: init
-      env:
+      - name: Initialization environment
+        id: init
+        env:
           DEBIAN_FRONTEND: noninteractive
         run: |
           docker rmi -f $(docker images -q) 2>/dev/null || true
@@ -67,11 +68,11 @@ jobs:
           timedatectl status || true
           echo "status=success" >> ${GITHUB_OUTPUT}
 
-    - name: Create simulated physical disk
-      run: |
+      - name: Create simulated physical disk
+        run: |
           mnt_size=$(expr $(df -h /mnt | tail -1 | awk '{print $4}' | sed 's/[[:alpha:]]//g' | sed 's/\..*//') - 1)
           root_size=$(expr $(df -h / | tail -1 | awk '{print $4}' | sed 's/[[:alpha:]]//g' | sed 's/\..*//') - 4)
-          sudo truncate -s "${mnt_size}"G /mnt/mn.img
+          sudo truncate -s "${mnt_size}"G /mnt/mnt.img
           sudo truncate -s "${root_size}"G /root.img
           sudo losetup /dev/loop6 /mnt/mnt.img
           sudo losetup /dev/loop7 /root.img

@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build  2100-imp
+name: Build  k2-imp
 
 on:
   repository_dispatch:

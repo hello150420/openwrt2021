@@ -164,7 +164,7 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
         body: |
-          This is LIENOL OpenWrt firmware for WR30U
+          This is IMP OpenWrt firmware for AC2100
           * Firmware information
           Default IP: 192.168.2.1
           Default username: root

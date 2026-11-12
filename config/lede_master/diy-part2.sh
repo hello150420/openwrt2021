@@ -61,6 +61,10 @@ git clone  https://github.com/gdy666/luci-app-lucky.git package/lucky
 rm -rf  feeds/luci/applications/luci-app-openclash
 rm -rf  feeds/luci/applications/luci-app-passwall
 git clone -b master --single-branch --filter=blob:none https://github.com/vernesong/OpenClash.git package/openclash
+
+# Add luci-app-dockerman
+rm -rf  feeds/luci/applications/luci-app-dockerman
+git clone  https://github.com/lisaac/luci-app-dockerman package/luci-app-dockerman
 #
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci

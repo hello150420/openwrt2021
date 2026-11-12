@@ -4,7 +4,7 @@
 # Description: Build OpenWrt system image
 #============================================================================================
 
-name: Build N1 OpenWrt image
+name: Build N1 IMP image
 
 on:
   repository_dispatch:
@@ -13,7 +13,7 @@ on:
       source_branch:
         description: "Select the source branch"
         required: false
-        default: "lede_master"
+        default: "immortalwrt_master"
         type: choice
         options:
           - openwrt_main
@@ -219,7 +219,7 @@ on:
       kernel_usage:
         description: "Set the tags of the stable kernel."
         required: false
-        default: "stable"
+        default: "flippy"
         type: choice
         options:
           - stable
@@ -326,7 +326,7 @@ jobs:
           fi
           source_branch_input="${{ inputs.source_branch }}"
           REPO_NAME="${source_branch_input%_*}"
-          REPO_BRANCH="${source_branch_input##*_}"
+          REPO_BRANCH="openwrt-24.10"
 
           # Clone source code
           git clone -q --single-branch --depth=1 --branch=${REPO_BRANCH} ${REPO_URL} openwrt
